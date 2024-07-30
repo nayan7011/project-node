@@ -2,6 +2,9 @@
   "name": "pro",
   "version": "0.0.0",
   "private": true,
+  "description": "My Node.js and EJS application",
+  "main": "app.js",
+  
   "scripts": {
     "start": "node ./bin/www"
   },
