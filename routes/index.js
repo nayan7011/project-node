@@ -8,7 +8,7 @@ const localStrategy = require('passport-local')
 passport.use(new localStrategy(userModel.authenticate()))
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('dashboard', { title: 'Express' });
 });
 
 router.get('/register', function(req, res, next) {
@@ -149,9 +149,11 @@ router.put('/edit/:id', async (req, res) => {
       }
       });
 
-      router.get('/dashboard', function(req, res, next) {
-        res.render('dashboard', { title: 'Express' });
+      // router.get('/dashboard', function(req, res, next) {
+      //   res.render('dashboard', { title: 'Express' });
+      // });
+      router.get('/login', function(req, res, next) {
+        res.render('index', { title: 'Express' });
       });
-
 
 module.exports = router;
